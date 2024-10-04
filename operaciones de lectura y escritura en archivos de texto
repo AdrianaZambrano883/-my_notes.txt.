@@ -1,0 +1,18 @@
+# Paso 1: Escritura de archivo
+with open('my_notes.txt', 'w') as file:
+    # Escribimos algunas notas personales en el archivo
+    file.write('Nota 1: Recordar estudiar para el examen de Python.\n')
+    file.write('Nota 2: Comprar leche y pan.\n')
+    file.write('Nota 3: Llamar a mamá.\n')
+
+# El archivo se cierra automáticamente al salir del bloque 'with'
+
+# Paso 2: Lectura de archivo línea por línea
+with open('my_notes.txt', 'r') as file:
+    # Leemos el archivo línea por línea
+    line = file.readline()
+    while line:
+        print(line.strip())  # Imprimimos la línea sin los saltos de línea
+        line = file.readline()  # Leemos la siguiente línea
+
+# El archivo se cierra automáticamente al salir del bloque 'with'
